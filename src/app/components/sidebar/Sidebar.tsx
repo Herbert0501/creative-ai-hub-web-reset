@@ -2,6 +2,8 @@
 
 import Menubar from "./Menubar";
 import { useAppContext } from "../AppContext";
+import Toolbar from "./Toolbar";
+import ChatList from "./ChatList";
 
 export default function Sidebar() {
   const {
@@ -12,9 +14,11 @@ export default function Sidebar() {
     <nav
       className={`${
         displaySidebar ? "" : "hidden"
-      } h-full w-60 bg-neutral-50 flex flex-col dark:bg-neutral-900`}
+      } flex flex-col relative h-full w-60 flex flex-col bg-neutral-50 dark:bg-neutral-900`}
     >
       <Menubar />
+      <ChatList />
+      <Toolbar />
     </nav>
   );
 }

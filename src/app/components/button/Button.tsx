@@ -17,9 +17,9 @@ export default function Button({
   const defaultClass =
     "text-black dark:text-white bg-gray-50 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-900";
   const outlineClass =
-    "border border-neutral-400 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-neutral-800";
+    "border border-neutral-400 text-black dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-800";
   const textClass =
-    "text-black dark:text-gray-300 bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700";
+    "text-black dark:text-gray-300 bg-transparent hover:bg-gray-200 dark:hover:bg-neutral-800";
 
   return (
     <button
