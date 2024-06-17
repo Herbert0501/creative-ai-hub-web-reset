@@ -14,7 +14,7 @@ export default function Sidebar() {
     <nav
       className={`${
         displaySidebar ? "" : "hidden"
-      } flex flex-col relative h-full w-60 flex flex-col bg-neutral-50 dark:bg-neutral-900`}
+      } flex flex-col relative h-full w-64 flex flex-col bg-neutral-50 dark:bg-neutral-900`}
     >
       <Menubar />
       <ChatList />

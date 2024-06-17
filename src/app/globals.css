@@ -16,6 +16,13 @@
   }
 }
 
+/* 引入字体 */
+@font-face {
+  font-family: 'AlibabaPuHuiTi';
+  src: url('assets/fonts/AlibabaPuHuiTi2.0.woff2') format('woff2'),
+       url('assets/fonts/AlibabaPuHuiTi2.0.woff') format('woff');
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -29,6 +36,7 @@ body {
 body,html{
   height: 100%;
   font-size: 16px;
+  font-family: 'AlibabaPuHuiTi', sans-serif;
 }
 
 @layer utilities {
