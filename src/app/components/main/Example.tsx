@@ -1,22 +1,31 @@
-const roles = [
-  { icon: "💡", description: "设计一款有趣的编程游戏" },
-  { icon: "💻", description: "为我创建个人网页" },
-  { icon: "📅", description: "TikTok的内容日历" },
-  { icon: "✈️", description: "像本地人一样游览首尔" },
-];
+import { useState, useEffect, useMemo } from 'react';
+import { Role, roles } from '@/common/roles';
+
+function getRandomRoles(roles: Role[], count: number): Role[] {
+  const shuffled = roles.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
 
 export default function Example() {
+  const [randomRoles, setRandomRoles] = useState<Role[]>([]);
+
+  const memoizedRoles = useMemo(() => getRandomRoles(roles, 4), []); 
+
+  useEffect(() => {
+    setRandomRoles(memoizedRoles);
+  }, [memoizedRoles]); 
+
   return (
-    <div className="flex flex-row justify-center items-center space-x-4 p-4">
-      {roles.map((role, index) => (
+    <div className="flex flex-row justify-center items-center space-x-4 p-4 h-40">
+      {randomRoles.map((role: Role, index: number) => (
         <div
           key={index}
-          className="flex flex-col items-left p-4 bg-white dark:bg-neutral-700 rounded-lg shadow-md w-48 h-32
+          className="flex flex-col items-left p-4 bg-transparent rounded-xl shadow-md w-40 h-28
           hover:bg-neutral-100 dark:hover:bg-neutral-600 transition-colors duration-300 cursor-pointer
-          "
+          border border-neutral-300 dark:border-neutral-700"
         >
           <div className="text-lg">{role.icon}</div>
-          <div className="text-base mt-2 text-left text-gray-500 dark:text-gray-300">
+          <div className="text-sm mt-2 text-left text-gray-500 dark:text-gray-300">
             {role.description}
           </div>
         </div>
