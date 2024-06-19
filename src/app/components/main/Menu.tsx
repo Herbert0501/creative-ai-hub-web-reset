@@ -16,7 +16,7 @@ export default function Menu() {
     <div className="fixed gap-2 flex">
       <Button
         icon={LuPanelLeft}
-        className={`${displaySidebar ? "hidden" : ""} h-10 ml-4 mt-4`}
+        className={`${displaySidebar ? "hidden" : ""} h-10 ml-4 mt-4 `}
         variant="outline"
         onClick={() => {
           dispatch({

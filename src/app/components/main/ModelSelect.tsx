@@ -51,10 +51,11 @@ export default function ModelSelect() {
             type="button"
             className={`inline-flex items-center text-center w-full h-11 rounded-lg px-2 py-2 font-bold 
               text-neutral-500 dark:text-gray-300 hover:bg-zinc-50 dark:hover:bg-[#2F2F2F]
+              transition-colors duration-300
               ${
                 isOpen
                   ? "bg-zinc-50 dark:bg-[#2F2F2F]"
-                  : "bg-white dark:bg-neutral-800"
+                  : ""
               }
               `}
             onClick={toggleDropdown}
