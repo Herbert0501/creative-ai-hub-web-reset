@@ -44,7 +44,7 @@ export default function ModelSelect() {
   };
 
   return (
-    <div className="relative inline-block text-left p-4 w-52">
+    <div className="relative flex text-left ml-2 mt-4 w-52">
       <div onBlur={handleBlur} ref={dropdownRef}>
         <span className="rounded-md">
           <button
@@ -68,7 +68,7 @@ export default function ModelSelect() {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute mt-1 w-52 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          className="origin-top-right absolute mt-12 w-52 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
           bg-white dark:bg-[#2F2F2F]
           "
         >

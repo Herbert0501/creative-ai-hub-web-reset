@@ -3,9 +3,11 @@ import Welcome from "./Welcome";
 
 export default function Main() {
   return (
-    <main className="overflow-y-auto relative flex flex-1 bg-white text-gray-900 dark:bg-neutral-800 dark:text-gray-100">
+    <main className="relative flex flex-col flex-1 bg-white text-gray-900 dark:bg-neutral-800 dark:text-gray-100">
       <Menu />
-      <Welcome />
+      <div className="overflow-y-auto flex-1">
+        <Welcome />
+      </div>
     </main>
   );
 }

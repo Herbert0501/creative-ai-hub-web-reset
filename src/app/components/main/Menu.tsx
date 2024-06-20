@@ -13,10 +13,10 @@ export default function Menu() {
   } = useAppContext();
 
   return (
-    <div className="fixed gap-2 flex">
+    <div className="sticky flex w-full top-0 bg-white dark:bg-neutral-800">
       <Button
         icon={LuPanelLeft}
-        className={`${displaySidebar ? "hidden" : ""} h-10 ml-4 mt-4 `}
+        className={`${displaySidebar ? "hidden" : ""} h-10 ml-4 mt-2 `}
         variant="outline"
         onClick={() => {
           dispatch({
